@@ -1,0 +1,15 @@
+version: "3.3"
+
+services:
+  financas-mysql:
+    image: mysql
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+    ports:
+      - "3306:3306"
+    volumes:
+      - minhas_financas:/var/lib/mysql
+
+volumes:
+  minhas_financas:
